@@ -26,24 +26,7 @@
   "devDependencies": {
     "@types/hapi__glue": "^6.1.9",
     "@hapipal/types-haute-couture": "^0.0.1-alpha.1",
-    "@types/luxon": "^3.4.1",
-    "@types/minimist": "^1.2.5",
-    "@types/mysql": "^2.15.25",
-    "@types/node": "^20.11.5",
-    "@types/uuid": "^9.0.7",
-    "eslint": "^8.56.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
-    "husky": "^8.0.3",
-    "nodemon": "^3.0.3",
-    "prettier": "^3.2.4",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.3.3",
-    "tsc-alias": "^1.8.8",
-    "eslint-config-prettier": "^9.1.0"
+    "@types/luxon": "^3.4.1"
   },
   "lint-staged": {
     "*.ts": [
