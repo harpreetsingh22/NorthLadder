@@ -37,7 +37,6 @@
     "@hapi/wreck": "^18.0.1",
     "@hapipal/haute-couture": "^4.3.1",
     "@hapipal/schmervice": "^3.0.0",
-    "@hapipal/schwifty": "git+https://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:x-oauth-basic@github.com:rariohq/schwifty.git",
     "@hapipal/toys": "^4.0.0",
     "dd-trace": "^5.0.0",
     "dotenv": "^16.3.2",
