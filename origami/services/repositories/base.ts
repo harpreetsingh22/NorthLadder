@@ -26,7 +26,7 @@ export default abstract class BaseRepository extends Service implements IWrite, 
     return query as T;
   }
 
-  async deleteById<T>(modelName: string, id: number, txn?: Transaction): Promise<boolean> {
+  async deleteById(modelName: string, id: number, txn?: Transaction): Promise<boolean> {
     const model = this.server.models()[modelName];
     const deletedCount = await model.query(txn).deleteById(id);
     return deletedCount > 0;

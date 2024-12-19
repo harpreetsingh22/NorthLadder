@@ -9,13 +9,13 @@ const productCreationPayload = {
 };
 
 const productUpdationPayload = {
-  productName: Joi.string().required(),
-  productDescription: Joi.string().required(),
+  productName: Joi.string(),
+  productDescription: Joi.string(),
   price: Joi.number().positive().integer(),
-  category: Joi.string().required(),
-  stockQuantity: Joi.number().required(),
+  category: Joi.string(),
+  stockQuantity: Joi.number(),
 };
 
 // eslint-disable-next-line import/prefer-default-export
 export const productCreationPayloadModel = Joi.object(productCreationPayload);
-export const productUpdationPayloadModel = Joi.object(productUpdationPayload);
+export const productUpdationPayloadModel = Joi.object(productUpdationPayload).min(1);

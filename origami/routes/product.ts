@@ -1,7 +1,13 @@
 import { ServerRoute } from '@hapi/hapi';
 import { failAction } from '@utilities';
 import { productCreationPayloadModel, productUpdationPayloadModel } from '@validators';
-import { createProduct, updateProduct, getProductById, deleteProductById, getProducts } from '@controllers/product';
+import {
+  createProduct,
+  updateProduct,
+  getProductById,
+  deleteProductById,
+  getProducts,
+} from '@controllers/product';
 import Joi from 'joi';
 
 const routes: ServerRoute[] = [

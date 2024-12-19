@@ -32,13 +32,3 @@ declare module '@hapipal/schwifty' {
     ProductModel: typeof ProductModel;
   }
 }
-
-
-
-
-
-
-
-
-
-

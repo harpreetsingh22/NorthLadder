@@ -1,13 +1,19 @@
 import BaseRepository from './base';
-import { Product } from '@interfaces/product';
 
 export default class ProductRepository extends BaseRepository {
   async findByFields<T>({
-    category, productName, page = 0, limit = 10
-  }: { category?: string, productName?: string; page?: number; limit?: number }): Promise<T> {
-
+    category,
+    productName,
+    page = 0,
+    limit = 10,
+  }: {
+    category?: string;
+    productName?: string;
+    page?: number;
+    limit?: number;
+  }): Promise<T> {
     const { ProductModel } = this.server.models();
-    let query = ProductModel.query();;
+    const query = ProductModel.query();
 
     if (category) {
       query.where('category', category);

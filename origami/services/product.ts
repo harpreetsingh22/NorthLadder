@@ -10,11 +10,11 @@ export default class ProductService extends Service {
       {
         ...productInfo,
       },
-      null
+      null,
     );
   }
 
-  async updateProduct({ id, productInfo }: { id: number, productInfo: Product }) {
+  async updateProduct({ id, productInfo }: { id: number; productInfo: Product }) {
     const { productRepository } = this.server.services();
 
     return productRepository.update<Product>(
@@ -23,35 +23,40 @@ export default class ProductService extends Service {
       {
         ...productInfo,
       },
-      null
+      null,
     );
   }
 
   async findProductById({ id }: { id: number }) {
     const { productRepository } = this.server.services();
 
-    return productRepository.findById<Product>(
-      'ProductModel',
-      id,
-      null
-    );
+    return productRepository.findById<Product>('ProductModel', id, null);
   }
 
   async deleteProductById({ id }: { id: number }) {
     const { productRepository } = this.server.services();
 
-    return productRepository.deleteById<Product>(
-      'ProductModel',
-      id,
-      null
-    );
+    return productRepository.deleteById('ProductModel', id, null);
   }
 
   async findByFields({
-    category, productName, page, limit,
-  }: { category?: string, productName?: string; page?: number; limit?: number }): Promise<ProductResultSet> {
+    category,
+    productName,
+    page,
+    limit,
+  }: {
+    category?: string;
+    productName?: string;
+    page?: number;
+    limit?: number;
+  }): Promise<ProductResultSet> {
     const { productRepository } = this.server.services();
-    const products = await productRepository.findByFields<ProductResultSet>({ category, productName, page, limit })
+    const products = await productRepository.findByFields<ProductResultSet>({
+      category,
+      productName,
+      page,
+      limit,
+    });
     return products;
   }
 }
